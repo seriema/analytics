@@ -1,12 +1,12 @@
 <!--
-title: Google Tag Manager
-description: Using the google tag manager plugin
+title: Microsoft Application Insights
+description: Using the microsoft app insights plugin
 -->
-# Google Tag Manager plugin for analytics
+# Microsoft Application Insights plugin for analytics
 
-Integration with google tag manager for [analytics](https://www.npmjs.com/package/analytics)
+Integration with Microsoft AppInsights for [analytics](https://www.npmjs.com/package/analytics)
 
-This analytics plugin will load google tag manager into your application.
+This analytics plugin will load Microsoft Application Insights into your application.
 
 For more information [see the docs](https://getanalytics.io/plugins/google-tag-manager/).
 
@@ -30,24 +30,24 @@ For more information [see the docs](https://getanalytics.io/plugins/google-tag-m
 
 ## Installation
 
-Install `analytics` and `@analytics/google-tag-manager` packages
+Install `analytics` and `@analytics/microsoft-app-insights` packages
 
 ```bash
 npm install analytics
-npm install @analytics/google-tag-manager
+npm install @analytics/microsoft-app-insights
 ```
 
 <!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
 
 ## How to use
 
-The `@analytics/google-tag-manager` package works in [the browser](#browser-usage). To use, install the package, include in your project and initialize the plugin with [analytics](https://www.npmjs.com/package/analytics).
+The `@analytics/microsoft-app-insights` package works in [the browser](#browser-usage). To use, install the package, include in your project and initialize the plugin with [analytics](https://www.npmjs.com/package/analytics).
 
 Below is an example of how to use the browser plugin.
 
 ```js
 import Analytics from 'analytics'
-import googleTagManager from '@analytics/google-tag-manager'
+import googleTagManager from '@analytics/microsoft-app-insights'
 
 const analytics = Analytics({
   app: 'awesome-app',
@@ -69,26 +69,26 @@ analytics.track('cartCheckout', {
 
 ```
 
-After initializing `analytics` with the `googleTagManager` plugin, data will be sent into Google Tag Manager whenever [analytics.page](https://getanalytics.io/api/#analyticspage), or [analytics.track](https://getanalytics.io/api/#analyticstrack) are called.
+After initializing `analytics` with the `googleTagManager` plugin, data will be sent into Microsoft Application Insights whenever [analytics.page](https://getanalytics.io/api/#analyticspage), or [analytics.track](https://getanalytics.io/api/#analyticstrack) are called.
 
 See [additional implementation examples](#additional-examples) for more details on using in your project.
 
 ## Platforms Supported
 
-The `@analytics/google-tag-manager` package works in [the browser](#browser-usage)
+The `@analytics/microsoft-app-insights` package works in [the browser](#browser-usage)
 
 ## Browser usage
 
-The Google Tag Manager client side browser plugin works with these analytic api methods:
+The Microsoft Application Insights client side browser plugin works with these analytic api methods:
 
-- **[analytics.page](https://getanalytics.io/api/#analyticspage)** - Sends page views into Google Tag Manager 
-- **[analytics.track](https://getanalytics.io/api/#analyticstrack)** - Track custom events and send to Google Tag Manager 
+- **[analytics.page](https://getanalytics.io/api/#analyticspage)** - Sends page views into Microsoft Application Insights 
+- **[analytics.track](https://getanalytics.io/api/#analyticstrack)** - Track custom events and send to Microsoft Application Insights 
 
 ### Browser API
 
 ```js
 import Analytics from 'analytics'
-import googleTagManager from '@analytics/google-tag-manager'
+import googleTagManager from '@analytics/microsoft-app-insights'
 
 const analytics = Analytics({
   app: 'awesome-app',
@@ -121,9 +121,9 @@ Below are additional implementation examples.
   <!DOCTYPE html>
   <html>
     <head>
-      <title>Using @analytics/google-tag-manager in HTML</title>
+      <title>Using @analytics/microsoft-app-insights in HTML</title>
       <script src="https://unpkg.com/analytics/dist/analytics.min.js"></script>
-      <script src="https://unpkg.com/@analytics/google-tag-manager/dist/@analytics/google-tag-manager.min.js"></script>
+      <script src="https://unpkg.com/@analytics/microsoft-app-insights/dist/@analytics/microsoft-app-insights.min.js"></script>
       <script type="text/javascript">
         /* Initialize analytics */
         var Analytics = _analytics.init({
@@ -157,13 +157,13 @@ Below are additional implementation examples.
 <details>
   <summary>Using in HTML via ES Modules</summary>
 
-  Using `@analytics/google-tag-manager` in ESM modules.
+  Using `@analytics/microsoft-app-insights` in ESM modules.
 
   ```html
   <!DOCTYPE html>
   <html>
     <head>
-      <title>Using @analytics/google-tag-manager in HTML via ESModules</title>
+      <title>Using @analytics/microsoft-app-insights in HTML via ESModules</title>
       <script>
         // Polyfill process.
         // **Note**: Because `import`s are hoisted, we need a separate, prior <script> block.
@@ -171,7 +171,7 @@ Below are additional implementation examples.
       </script>
       <script type="module">
         import analytics from 'https://unpkg.com/analytics/lib/analytics.browser.es.js?module'
-        import analyticsGtagManager from 'https://unpkg.com/@analytics/google-tag-manager/lib/analytics-plugin-google-tag-manager.browser.es.js?module'
+        import analyticsGtagManager from 'https://unpkg.com/@analytics/microsoft-app-insights/lib/analytics-plugin-google-tag-manager.browser.es.js?module'
         /* Initialize analytics */
         const Analytics = analytics({
           app: 'analytics-html-demo',
@@ -218,11 +218,11 @@ See the [full list of analytics provider plugins](https://getanalytics.io/plugin
 
 ## Using multiple instances of GTM
 
-As noted in the [GTM docs](https://developers.google.com/tag-manager/devguide#multiple-containers), it's possible to load multiple instances of google tag manager on the page. This method is [not exactly recommended](https://www.simoahava.com/gtm-tips/multiple-gtm-containers-on-the-page/) by analytics experts if you can avoid it by using a single container. But if you must! You can!
+As noted in the [GTM docs](https://developers.google.com/tag-manager/devguide#multiple-containers), it's possible to load multiple instances of Microsoft Application Insights on the page. This method is [not exactly recommended](https://www.simoahava.com/gtm-tips/multiple-gtm-containers-on-the-page/) by analytics experts if you can avoid it by using a single container. But if you must! You can!
 
 ```js
 import Analytics from 'analytics'
-import googleTagManager from '@analytics/google-tag-manager'
+import googleTagManager from '@analytics/microsoft-app-insights'
 
 const GTMOne = googleTagManager({ containerId: 'GTM-123xyz' })
 // For instance 2, override the plugin 'name' and provide the 2nd GTM container ID
@@ -242,11 +242,11 @@ const analytics = Analytics({
 // Both instances will be loaded into the page
 ```
 
-This functionality has been [added](https://github.com/DavidWells/analytics/pull/30) by the wonderful [@zobzn](https://github.com/zobzn)!
+This functionality has been [added](https://github.com/DavidWells/analytics/pull/50) by the wonderful [@seriema](https://github.com/seriema)!
 
 ## Tracking if JS is disabled
 
-The [analytics library](https://github.com/DavidWells/analytics/) will load the Google Tag manager javascript onto the page. This will work for every web site visitor that has javascript enabled.
+The [analytics library](https://github.com/DavidWells/analytics/) will load the Microsoft Application Insights javascript onto the page. This will work for every web site visitor that has javascript enabled.
 
 For the small number of people who might have javascript disabled you will want to add the following `<noscript>` tags to the HTML of your site as outlined in [GTM install docs](https://developers.google.com/tag-manager/quickstart)
 

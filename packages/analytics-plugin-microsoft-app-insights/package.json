@@ -1,11 +1,11 @@
 {
-  "name": "@analytics/google-tag-manager",
-  "version": "0.2.3",
+  "name": "@analytics/microsoft-app-insights",
+  "version": "0.1.0",
   "description": "Google tag manager plugin for 'analytics' module",
   "projectMeta": {
     "provider": {
-      "name": "Google Tag Manager",
-      "url": "https://tagmanager.google.com/"
+      "name": "Microsoft Application Insights",
+      "url": "https://docs.microsoft.com/en-us/azure/azure-monitor/azure-monitor-app-hub"
     },
     "platforms": {
       "browser": "./src/browser.js"
@@ -15,9 +15,9 @@
     "analytics",
     "analytics-project",
     "analytics-plugin",
-    "Gtm",
-    "Google tag manager",
-    "google-tag-manager"
+    "appinsights",
+    "Microsoft Application Insights",
+    "microsoft-app-insights"
   ],
   "author": "David Wells",
   "license": "MIT",
@@ -30,13 +30,13 @@
     "release:major": "npm version major && npm publish",
     "es": "../../node_modules/.bin/babel-node ./testBabel.js"
   },
-  "main": "lib/analytics-plugin-google-tag-manager.cjs.js",
-  "globalName": "analyticsGtagManager",
-  "jsnext:main": "lib/analytics-plugin-google-tag-manager.es.js",
-  "module": "lib/analytics-plugin-google-tag-manager.es.js",
+  "main": "lib/analytics-plugin-microsoft-app-insights.cjs.js",
+  "globalName": "analyticsMsAppInsights",
+  "jsnext:main": "lib/analytics-plugin-microsoft-app-insights.es.js",
+  "module": "lib/analytics-plugin-microsoft-app-insights.es.js",
   "browser": {
-    "./lib/analytics-plugin-google-tag-manager.cjs.js": "./lib/analytics-plugin-google-tag-manager.browser.cjs.js",
-    "./lib/analytics-plugin-google-tag-manager.es.js": "./lib/analytics-plugin-google-tag-manager.browser.es.js"
+    "./lib/analytics-plugin-microsoft-app-insights.cjs.js": "./lib/analytics-plugin-microsoft-app-insights.browser.cjs.js",
+    "./lib/analytics-plugin-microsoft-app-insights.es.js": "./lib/analytics-plugin-microsoft-app-insights.browser.es.js"
   },
   "files": [
     "dist",
